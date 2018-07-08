@@ -1,0 +1,21 @@
+FROM aka1spanky/knowengpipelines:base07_07_2018
+MAINTAINER Dan Lanier <lanier4@illinois.edu>
+
+USER root
+
+RUN mkdir /pipelines
+ENV PIPE_DIR /pipelines
+
+COPY Data_Cleanup_Pipeline ${PIPE_DIR}/Data_Cleanup_Pipeline
+COPY GeneSet_Characterization_Pipeline ${PIPE_DIR}/GeneSet_Characterization_Pipeline
+COPY Gene_Prioritization_Pipeline ${PIPE_DIR}/Gene_Prioritization_Pipeline
+COPY General_Clustering_Pipeline ${PIPE_DIR}/General_Clustering_Pipeline
+COPY Phenotype_Prediction_Pipeline ${PIPE_DIR}/Phenotype_Prediction_Pipeline
+COPY Samples_Clustering_Pipeline ${PIPE_DIR}/Samples_Clustering_Pipeline
+COPY Signature_Analysis_Pipeline ${PIPE_DIR}/Signature_Analysis_Pipeline
+COPY Spreadsheets_Transformation ${PIPE_DIR}/Spreadsheets_Transformation
+
+USER jovyan
+
+# docker build -f Dockerfile.addpipelines -t aka1spanky/knowengpipelines:pipelines .
+
