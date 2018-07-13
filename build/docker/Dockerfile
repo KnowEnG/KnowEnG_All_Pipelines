@@ -33,6 +33,8 @@ RUN conda install -y pandas==0.18.1
 RUN conda install -y scipy==0.19.1
 RUN conda install -y scikit-learn==0.17.1
 
+RUN conda clean --all
+
 RUN pip install --upgrade pip
 
 ARG JUPYTERHUB_VERSION=0.9.*
