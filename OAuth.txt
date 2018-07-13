@@ -1,0 +1,14 @@
+
+
+oauthenticator::dakine
+
+pip3 install oauthenticator
+
+from oauthenticator.google import GoogleOAuthenticator
+c.JupyterHub.authenticator_class = GoogleOAuthenticator
+
+c.LocalAuthenticator.create_system_users = True
+c.Authenticator.add_user_cmd =  ['adduser', '--home', '/home/USERNAME']
+
+['adduser', '-q', '--gecos', '""', '--disabled-password']
+
