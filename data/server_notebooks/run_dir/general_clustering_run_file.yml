@@ -10,7 +10,7 @@ affinity_metric:            euclidean
 linkage_criterion:          ward
 
 # - spreadsheet          dataframe in .tsv format                    -
-spreadsheet_name_full_path: /pipelines/General_Clustering_Pipeline/data/spreadsheets/EXPR_GSE_METABRIC_lymphN_continuous.tsv.gz
+spreadsheet_name_full_path: /pipelines/General_Clustering_Pipeline/data/spreadsheets/EXPR_GSE_METABRIC_lymphN_continuous.tsv
 
 # - directory where the result and temporary files will be written   -
 results_directory:          ./run_dir/results

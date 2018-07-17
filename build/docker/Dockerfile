@@ -28,30 +28,19 @@ RUN git clone https://github.com/KnowEnG/Signature_Analysis_Pipeline.git ${SA_SR
 USER ${NB_USER}
 
 RUN conda update -n base conda
-RUN conda clean --all
-RUN conda install -y matplotlib
-RUN conda clean --all
-RUN conda install -y lifelines
-RUN conda clean --all
-RUN conda install -y pymc
-RUN conda clean --all
-RUN conda install -y pyyaml
-RUN conda clean --all
-RUN conda install -y xmlrunner
-RUN conda clean --all
-RUN conda install -y cython
-RUN conda clean --all
-RUN conda install -y ipywidgets
-RUN conda clean --all
 
 RUN conda install -y numpy==1.11.1
-RUN conda clean --all
 RUN conda install -y pandas==0.18.1
-RUN conda clean --all
 RUN conda install -y scipy==0.19.1
-RUN conda clean --all
 RUN conda install -y scikit-learn==0.17.1
-RUN conda clean --all
+
+RUN conda install -y matplotlib
+RUN conda install -y lifelines
+RUN conda install -y pymc
+RUN conda install -y pyyaml
+RUN conda install -y xmlrunner
+RUN conda install -y cython
+RUN conda install -y ipywidgets
 
 RUN pip install --upgrade pip
 
