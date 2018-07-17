@@ -12,3 +12,12 @@ c.Authenticator.add_user_cmd =  ['adduser', '--home', '/home/USERNAME']
 
 ['adduser', '-q', '--gecos', '""', '--disabled-password']
 
+
+callback url example:
+http[s]://[your-host]/hub/oauth_callback
+example.com:8000
+
+c.GitHubOAuthenticator.oauth_callback_url = os.environ['OAUTH_CALLBACK_URL']
+c.GitHubOAuthenticator.client_id = os.environ['GITHUB_CLIENT_ID']
+c.GitHubOAuthenticator.client_secret = os.environ['GITHUB_CLIENT_SECRET']
+
