@@ -10,12 +10,12 @@ RUN apt-get install -y git
 
 RUN mkdir /pipelines
 # Clone from github
-ENV DC_SRC_LOC /pipelines/Data_Cleanup_Pipeline
-RUN git clone https://github.com/KnowEnG-Research/Data_Cleanup_Pipeline.git ${DC_SRC_LOC}
+#ENV DC_SRC_LOC /pipelines/Data_Cleanup_Pipeline
+#RUN git clone https://github.com/KnowEnG-Research/Data_Cleanup_Pipeline.git ${DC_SRC_LOC}
 ENV SC_SRC_LOC /pipelines/Samples_Clustering_Pipeline
 RUN git clone https://github.com/KnowEnG/Samples_Clustering_Pipeline.git ${SC_SRC_LOC}
 ENV ST_SRC_LOC /pipelines/Spreadsheets_Transformation
-RUN git clone https://dlanier:runSallyrun396@github.com/KnowEnG/Spreadsheets_Transformation.git ${ST_SRC_LOC}
+RUN git clone https://github.com/KnowEnG/Spreadsheets_Transformation.git ${ST_SRC_LOC}
 
 USER ${NB_USER}
 
