@@ -1,0 +1,15 @@
+# edited from TEST_1_GS_pearson.yml
+
+# - Analysis Method: similarity, cc_similarity, net_similarity, cc_net_similarity
+method:                      similarity                 
+
+# - Similarity Measure: cosine, spearman, pearson
+similarity_measure:          pearson
+
+# Gene x Sample Gene_Expression and Sigature Spreadsheets
+spreadsheet_name_full_path:  /pipelines/Signature_Analysis_Pipeline/data/spreadsheets/TEST_1_gene_sample_pearson.tsv
+signature_name_full_path:    /pipelines/Signature_Analysis_Pipeline/data/spreadsheets/TEST_1_signature_pearson.tsv
+
+# directories for storing run results and temporary data
+results_directory:           run_dir/results
+tmp_directory:               run_dir/tmp

@@ -6,9 +6,6 @@ MAINTAINER Dan Lanier <lanier4@illinois.edu>
 USER root
 ENV NB_USER jovyan
 
-RUN conda update -n base conda
-RUN conda clean --all
-
 ENV HOME /home/${NB_USER}
 COPY data/server_notebooks ${HOME}/notebooks
 RUN chown -R jovyan /home/jovyan
