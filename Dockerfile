@@ -6,6 +6,9 @@ MAINTAINER Dan Lanier <lanier4@illinois.edu>
 USER root
 ENV NB_USER jovyan
 
+ENV ST_SRC_LOC /pipelines/Spreadsheets_Transformation_Pipeline
+RUN git clone https://dlanier:runSallyrun396@github.com/KnowEnG-Research/Spreadsheets_Transformation.git ${ST_SRC_LOC}
+
 RUN gzip -d /pipelines/Samples_Clustering_Pipeline/data/spreadsheets/*.gz
 
 RUN gzip -d /pipelines/General_Clustering_Pipeline/data/spreadsheets/*.gz
@@ -21,5 +24,8 @@ RUN chgrp -R users /home/jovyan
 
 USER ${NB_USER}
 
-# docker build -t knowengdev/jupyter_notebooks:test_notebooks .
+RUN conda install -y lifelines==0.11.2
+RUN conda install -y matplotlib==2.2.2
+
+# docker build -t knowengdev/jupyter_notebooks:all_pipelines .
 
