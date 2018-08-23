@@ -8,7 +8,7 @@ RUN conda update -n base conda
 ENV NB_USER jovyan
 
 ENV ST_SRC_LOC /pipelines/Spreadsheets_Transformation_Pipeline
-RUN git clone https://github.com/KnowEnG-Research/Spreadsheets_Transformation.git ${ST_SRC_LOC}
+RUN git clone https://github.com/KnowEnG/Spreadsheets_Transformation.git ${ST_SRC_LOC}
 
 RUN gzip -d /pipelines/Samples_Clustering_Pipeline/data/spreadsheets/*.gz
 
